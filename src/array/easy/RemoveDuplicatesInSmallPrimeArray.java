@@ -3,6 +3,7 @@ package array.easy;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+//Completed GFG - correct
 public class RemoveDuplicatesInSmallPrimeArray
 {
     public static void main(String[] args)
