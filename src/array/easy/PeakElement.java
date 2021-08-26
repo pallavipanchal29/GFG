@@ -1,5 +1,6 @@
 package array.easy;
 
+//Completed GFG - correct
 public class PeakElement
 {
     public static void main(String[] args)
@@ -10,24 +11,33 @@ public class PeakElement
     }
     public static  int peakElement(int[] arr,int n)
     {
-        int index = binarySearch(arr,0,n-1);
-        if(index >= 0 && index < n)
-            return 1;
-        else
-            return 0;
+        return findPeakUtil(arr, 0, n - 1, n);
     }
-    private static int binarySearch(int[] arr, int low, int high)
+    static int findPeakUtil(
+            int arr[], int low, int high, int n)
     {
-        while (low <= high)
-        {
-            int mid = low + (high - low)/2;
-            if((mid == 0 || arr[mid] > arr[mid - 1]) && (mid+1 == arr.length || arr[mid+1] < arr[mid]))
-                return mid;
-            else if(mid == 0 || arr[mid] < arr[mid-1])
-                high = mid-1;
-            else
-                low = mid+1;
-        }
-        return -1;
+        int mid = low + (high - low) / 2;
+//        while (low <= high) {
+//            int mid = low + (high - low) / 2;
+//
+//            if ((mid == 0 || arr[mid - 1] <= arr[mid]) && (mid == n - 1 || arr[mid + 1] <= arr[mid]))
+//                return mid;
+//            else if (mid > 0 &&  arr[mid - 1] > arr[mid])
+//                high = mid - 1;
+//            else
+//                low = mid + 1;
+//        }
+//        return 0;
+
+        if ((mid == 0 || arr[mid - 1] <= arr[mid]) && (mid == n - 1 || arr[mid + 1] <= arr[mid]))
+            return mid;
+
+        else if (mid > 0 && arr[mid - 1] > arr[mid])
+            return findPeakUtil(arr, low, (mid - 1), n);
+
+        else
+            return findPeakUtil(
+                    arr, (mid + 1), high, n);
+
     }
 }
