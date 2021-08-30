@@ -11,12 +11,23 @@ public class CountZeroesInSortedMatrix
     static int countZeros(int A[][], int N)
     {
         int count = 0;
-        for(int i = 0;i<N;i++)
+        int row = 0;
+        int col = N-1;
+
+        //start from last column & check if last column contains 1 then all rows in that column will be 1
+        while(row<N & col>=0)
         {
-            for(int j = 0;j<A[i].length;j++)
+            //if it contains 1 move 1 column to left side
+            if ( A [row][col] == 1)
             {
-                if(A[i][j] == 0)
-                    count++;
+                col--;
+            }
+            else
+            {
+                //if it is zero all columns from 0 to that columns will be zero so count is incremented by that amount
+                // and moved to second row
+                count += col+1;
+                row++;
             }
         }
         return count;

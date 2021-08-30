@@ -5,8 +5,8 @@ public class MinNumberInSortedRotatedArray
 {
     public static void main(String[] args)
     {
-        int[] arr = new int[]{3,4,5,1,2};
-        System.out.println(minNumber(arr,0,arr.length));
+        int[] arr = new int[]{2,3,4,5,6,7,8,9,10,1};
+        System.out.println(minNumber(arr,0,arr.length-1));
     }
     static int minNumber(int arr[], int low, int high)
     {
@@ -16,7 +16,8 @@ public class MinNumberInSortedRotatedArray
 
     private static int binarySearch(int[] arr, int low, int high)
     {
-        while(low<=high){
+        while(low<=high)
+        {
             if(low==high)
                 return arr[low];
 
