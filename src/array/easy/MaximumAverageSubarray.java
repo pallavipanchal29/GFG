@@ -1,8 +1,5 @@
 package array.easy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.TreeMap;
 
 public class MaximumAverageSubarray
