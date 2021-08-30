@@ -12,7 +12,7 @@ public class MaximumSumSubarraySizeK
         arr.add(200);
         arr.add(300);
         arr.add(400);
-        System.out.println(maximumSumSubarray(4,arr,arr.size()));
+        System.out.println(maximumSumSubarray(2,arr,arr.size()));
     }
     static int maximumSumSubarray(int K, ArrayList<Integer> Arr,int N)
     {
