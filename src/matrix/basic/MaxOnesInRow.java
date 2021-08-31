@@ -1,7 +1,6 @@
 package matrix.basic;
 
-import java.util.HashMap;
-
+//Completed GFG - correct
 public class MaxOnesInRow
 {
     public static void main(String[] args)
