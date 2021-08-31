@@ -11,10 +11,12 @@ public class ElementsInRange
     }
     static boolean check_elements(long arr[], int n, int A, int B)
     {
-        for(int i = 0;i<n;i++)
+        for(int i = A;i<=B;i++)
         {
-            if(Arrays.binarySearch(arr,A,B,arr[i]) == 0)
-                return false;
+            int res = Arrays.binarySearch(arr,0,n,i);
+//            if(Arrays.binarySearch(arr,0,n,i) < 0)
+//                return false;
+            int a = 4;
         }
         return true;
     }
