@@ -1,5 +1,6 @@
 package matrix.school;
 
+//Comppleted GFG - correct
 public class DiffBetweenSumOfDiagonals
 {
     public static void main(String[] args)
