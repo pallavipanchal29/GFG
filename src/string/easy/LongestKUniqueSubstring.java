@@ -17,15 +17,20 @@ public class LongestKUniqueSubstring {
         {
             char ch = ' ';
             ch = s.charAt(hi);
+            //put character in hashmap
             hm.put(ch, hm.getOrDefault(ch, 0) + 1);
+            //if number if unique characters is less than k continue traversing by incrementing second pointer
             if (hm.size() < k)
             {
                 hi++;
-            } else if (hm.size() == k)
+            }
+            //if no of unique chars become equal to k note max length and increment second pointer
+            else if (hm.size() == k)
             {
                 max = Math.max(max, hi - lo + 1);
                 hi++;
             }
+            //if no. of unique characters becomes greater than k, remove some chars from left,
             else if (hm.size() >= k)
             {
                 while (hm.size() > k)
