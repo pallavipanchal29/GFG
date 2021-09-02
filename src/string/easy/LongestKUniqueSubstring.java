@@ -2,6 +2,7 @@ package string.easy;
 
 import java.util.HashMap;
 
+//Completed GFG - correct
 public class LongestKUniqueSubstring {
     public static void main(String[] args) {
         System.out.println(longestkSubstr("aabacbebebe", 3));
