@@ -1,5 +1,6 @@
 package linkedlist.basic;
 
+//Completed GFG - correct
 public class DeleteAlternateNodes
 {
     static Node head = null;
@@ -11,7 +12,7 @@ public class DeleteAlternateNodes
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
 
-        head = deleteAlternate(head);
+        deleteAlternate(head);
 
         while (head != null)
         {
@@ -19,18 +20,14 @@ public class DeleteAlternateNodes
             head = head.next;
         }
     }
-    public static Node deleteAlternate (Node head)
+    public static void deleteAlternate (Node head)
     {
-        if(head == null)
-            return null;
-        if(head.next == null)
-            return head;
-        Node next = null;
-        while (head != null && head.next != null)
-        {
-            next = head.next;
-            head.next = next.next;
+        if(head == null || head.next == null)
+            return;
+        Node temp = head;
+        while (temp != null && temp.next != null) {
+            temp.next = temp.next.next;
+            temp = temp.next;
         }
-        return head;
     }
 }
