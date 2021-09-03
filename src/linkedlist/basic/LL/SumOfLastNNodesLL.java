@@ -1,4 +1,4 @@
-package linkedlist.basic;
+package linkedlist.basic.LL;
 
 //Completed GFG - correct
 public class SumOfLastNNodesLL

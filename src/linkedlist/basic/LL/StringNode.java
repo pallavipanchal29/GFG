@@ -1,4 +1,4 @@
-package linkedlist.basic;
+package linkedlist.basic.LL;
 
 public class StringNode
 {

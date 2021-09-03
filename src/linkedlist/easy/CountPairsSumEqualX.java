@@ -1,4 +1,4 @@
-package linkedlist.basic;
+package linkedlist.easy;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

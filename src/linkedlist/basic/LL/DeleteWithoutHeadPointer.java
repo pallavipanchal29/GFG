@@ -1,4 +1,4 @@
-package linkedlist.basic;
+package linkedlist.basic.LL;
 
 //completed GFG - correct
 public class DeleteWithoutHeadPointer

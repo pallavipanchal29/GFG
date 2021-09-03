@@ -1,6 +1,6 @@
 package linkedlist;
 
-import linkedlist.basic.Node;
+import linkedlist.basic.LL.Node;
 
 //Completed GFG - correct
 public class InsertInMiddleLL

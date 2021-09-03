@@ -1,6 +1,6 @@
-package linkedlist.basic.cll;
+package linkedlist.basic.CLL;
 
-import linkedlist.basic.Node;
+import linkedlist.basic.LL.Node;
 
 //Completed GFG - correct
 public class CheckIfCLL
