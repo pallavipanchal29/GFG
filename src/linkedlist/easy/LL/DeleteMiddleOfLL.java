@@ -1,4 +1,6 @@
-package linkedlist.easy;
+package linkedlist.easy.LL;
+
+import linkedlist.easy.Node;
 
 public class DeleteMiddleOfLL {
     static Node head = null;
