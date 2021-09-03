@@ -7,30 +7,31 @@ public class ThreeSumClosest
 {
     public static void main(String[] args)
     {
-        int[] arr = new int[]{-7,9,8,3,1,1};
-        System.out.println(threeSumClosest(arr,2));
+        int[] arr = new int[]{5, 2, 7, 5};
+        System.out.println(threeSumClosest(arr,13));
     }
-    static int threeSumClosest(int[] array, int target)
+    static int threeSumClosest(int[] nums, int target)
     {
-        Arrays.sort(array);
-        int closestSum = Integer.MAX_VALUE;
-
-        for(int i = 0;i<array.length-2;i++)
+        Arrays.sort(nums);
+        int closet = Integer.MAX_VALUE;
+        for(int i=0; i<nums.length; i++)
         {
-            int low = i+1;
-            int high = array.length-1;
-
-            while (low < high)
+            int left = i+1;
+            int right = nums.length-1;
+            while(left<right)
             {
-                int sum = array[i] + array[low] + array[high];
-               closestSum = Math.min(Math.abs(target - sum),Math.abs(target - closestSum));
+                int sum = nums[left]+nums[right]+nums[i];
+                if(Math.abs(sum-target) < Math.abs(closet-target))
+                    closet = sum;
 
-                if (sum > target)
-                    high--;
+                if(sum>target)
+                    right--;
+                else if(sum<target)
+                    left++;
                 else
-                    low++;
+                    return sum;
             }
         }
-        return closestSum;
+        return closet;
     }
 }
