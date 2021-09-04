@@ -12,4 +12,10 @@ public class DLLNode
         next = null;
         prev = null;
     }
+    public DLLNode(int data,DLLNode next)
+    {
+        this.data = data;
+        this.next = next;
+        prev = null;
+    }
 }

@@ -4,16 +4,14 @@ import linkedlist.easy.Node;
 
 public class FindingMiddleElementLL
 {
-    static Node head = null;
-
     public static void main(String[] args)
     {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
-        head.next.next.next.next.next = new Node(6);
+        int[] keys = {1, 2, 3, 4, 5, 6};
+        Node head = null;
+
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
 
         System.out.println(getMiddle(head));
     }

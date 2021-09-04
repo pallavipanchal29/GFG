@@ -5,22 +5,19 @@ public class CompareTwoLL
 {
     //a b a b a
     //a b a a
-    static StringNode head1 = null;
-    static StringNode head2 = null;
-
     public static void main(String[] args)
     {
-        head1 = new StringNode('a');
-        head1.next = new StringNode('a');
-        head1.next.next = new StringNode('a');
-        head1.next.next.next = new StringNode('b');
-        head1.next.next.next.next = new StringNode('a');
+        Character[] keys1 = {'a','b','a','b','a'};
+        Character[] keys2 = {'a','b','a','a'};
+        StringNode head1 = null;
+        StringNode head2 = null;
 
-        head2 = new StringNode('a');
-        head2.next = new StringNode('a');
-        head2.next.next = new StringNode('a');
-        head2.next.next.next = new StringNode('b');
-        head2.next.next.next.next = new StringNode('a');
+        for (int i = keys1.length - 1; i >= 0; i--) {
+            head1 = new StringNode(keys1[i], head1);
+        }
+        for (int i = keys2.length - 1; i >= 0; i--) {
+            head2 = new StringNode(keys2[i], head2);
+        }
 
         System.out.println(compare(head1,head2));
     }

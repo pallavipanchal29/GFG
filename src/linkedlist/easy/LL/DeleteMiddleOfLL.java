@@ -2,22 +2,35 @@ package linkedlist.easy.LL;
 
 import linkedlist.easy.Node;
 
-public class DeleteMiddleOfLL {
-    static Node head = null;
-
+public class DeleteMiddleOfLL
+{
     public static void main(String[] args)
     {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
+        int[] keys = {1, 2, 2, 2, 3, 4, 4, 5};
+        Node head = null;
 
-        System.out.println(deleteMid(head));
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
+
+        head = removeDuplicates(head);
+
+        printList(head);
     }
-    static Node deleteMid(Node head)
+    static Node removeDuplicates(Node head)
     {
         return null;
 
+    }
+    public static void printList(Node head)
+    {
+        Node ptr = head;
+        while (ptr != null)
+        {
+            System.out.print(ptr.data + " —> ");
+            ptr = ptr.next;
+        }
+
+        System.out.println("null");
     }
 }

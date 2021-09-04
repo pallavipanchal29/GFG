@@ -14,7 +14,6 @@ public class RemoveDuplicateFromSortedLL
         }
 
         head = removeDuplicates(head);
-
         printList(head);
     }
     static Node removeDuplicates(Node head)

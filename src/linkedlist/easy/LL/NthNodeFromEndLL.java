@@ -5,22 +5,18 @@ import linkedlist.easy.Node;
 //Completed GFG - correct
 public class NthNodeFromEndLL
 {
-    static Node head = null;
-
     public static void main(String[] args)
     {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
-        head.next.next.next.next.next = new Node(6);
-        head.next.next.next.next.next.next = new Node(7);
-        head.next.next.next.next.next.next.next = new Node(8);
-        head.next.next.next.next.next.next.next.next = new Node(9);
+        int[] keys = {1, 2, 3, 4, 5, 6, 7, 8,9};
+        Node head = null;
 
-        System.out.println(getNthFromLast(head,4));
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
+
+        System.out.println(getNthFromLast(head,2));
     }
+
     static int getNthFromLast(Node head, int n)
     {
         Node temp = head;

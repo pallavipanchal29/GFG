@@ -10,4 +10,9 @@ public class StringNode
         this.data = data;
         next = null;
     }
+    public StringNode(char data,StringNode next)
+    {
+        this.data = data;
+        this.next = next;
+    }
 }

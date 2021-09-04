@@ -1,26 +1,23 @@
 package linkedlist.easy.DLL;
 
+import linkedlist.easy.Node;
+
 //Completed GFG - correct
 public class RotateDLL
 {
-    static DLLNode head = null;
     public static void main(String[] args)
     {
-        head = new DLLNode(1);
-        head.next = new DLLNode(2);
-        head.next.next = new DLLNode(3);
-        head.next.next.next = new DLLNode(4);
-        head.next.next.next.next = new DLLNode(5);
-        head.next.next.next.next.next = new DLLNode(6);
+        int[] keys = {1, 2, 3, 4, 5, 6};
+        DLLNode head = null;
+
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new DLLNode(keys[i], head);
+        }
 
         head = rotateP(head,2);
-
-        while (head != null)
-        {
-            System.out.print(head.data+" ");
-            head = head.next;
-        }
+        printList(head);
     }
+
     static DLLNode rotateP (DLLNode head, int p)
     {
         DLLNode end = head;
@@ -43,5 +40,15 @@ public class RotateDLL
             head = curr;
         }
         return head;
+    }
+    public static void printList(DLLNode head)
+    {
+        DLLNode ptr = head;
+        while (ptr != null)
+        {
+            System.out.print(ptr.data + " —> ");
+            ptr = ptr.next;
+        }
+        System.out.println("null");
     }
 }
