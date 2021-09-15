@@ -2,6 +2,7 @@ package array.basic;
 
 import java.util.ArrayList;
 
+//Completed GFG - correct
 public class ReverseArrayInGroups
 {
     public static void main(String[] args)
