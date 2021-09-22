@@ -15,6 +15,7 @@ public class MinNumForSumEven
         {
             sum = sum + A[i];
         }
+        //Condition for checking if number is odd
         if((sum & 1) == 1)
             return 1;
         else
