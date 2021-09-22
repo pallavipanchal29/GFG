@@ -24,17 +24,17 @@ public class NumberOfOccurance
                 low = mid + 1;
             else if(arr[mid] == x)
             {
-               int first = findFirstOccurance(arr,x);
-               int last = findLastOccurance(arr,x);
+               int first = findFirstOccurance(arr,mid,x);
+               int last = findLastOccurance(arr,mid+1,x);
                return last - first + 1;
             }
         }
         return 0;
     }
 
-    private static int findFirstOccurance(int[] arr, int x)
+    private static int findFirstOccurance(int[] arr,int midIndex, int x)
     {
-        for(int i = 0;i<arr.length;i++)
+        for(int i = 0;i<midIndex;i++)
         {
             if(arr[i] == x)
                 return i;
@@ -42,9 +42,9 @@ public class NumberOfOccurance
         return 0;
     }
 
-    private static int findLastOccurance(int[] arr, int x)
+    private static int findLastOccurance(int[] arr,int midIndex, int x)
     {
-        for(int i = arr.length-1;i>= 0;i--)
+        for(int i = arr.length-1;i>= midIndex;i--)
         {
             if(arr[i] == x)
                 return i;
