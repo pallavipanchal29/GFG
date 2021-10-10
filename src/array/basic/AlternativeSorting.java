@@ -22,11 +22,11 @@ public class AlternativeSorting
 
         for(int k = 0,i=0,j = N-1;k<N;++k)
         {
-            if(k%2 == 1)
+            if(k%2 == 1) // odd position minimum element
             {
                 temp[k] = arr[i++];
             }
-            else
+            else // even position maximum element
                 temp[k] = arr[j--];
         }
 
