@@ -1,5 +1,6 @@
 package array.basic;
 
+//Completed GFG - correct
 public class CountPairsOddXor
 {
     public static void main(String[] args)
