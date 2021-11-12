@@ -10,7 +10,7 @@ public class LongestSubstringContainingOne
 
     public static int count(String s)
     {
-        int maxLen = Integer.MIN_VALUE;
+        int maxLen = 0;
         int len = 0;
 
         for(int i = 0;i<s.length();i++)
