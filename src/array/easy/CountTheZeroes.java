@@ -28,4 +28,26 @@ public class CountTheZeroes
         }
         return -1;
     }
+
+    //Approach Two
+    static int countZeroesIntact(int[] arr, int n)
+    {
+        int index = -1;
+        int low = 0;
+        int high = n-1;
+
+        while (low <= high)
+        {
+            int mid = low + (high - low)/2;
+            if(arr[mid] == 0 && (mid == 0 || arr[mid - 1] == 1)) {
+                index = mid;
+                break;
+            }
+            else if(arr[mid] == 1)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        return index == -1 ? -1 : (n-index);
+    }
 }
