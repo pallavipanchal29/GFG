@@ -15,14 +15,13 @@ public class TotalCount
         {
             int count = 0;
             int temp = arr[i];
-            while (temp > k)
+
+            while (temp > 0)
             {
                 temp = temp - k;
                 count++;
             }
-            if(temp <= k)
-                count++;
-            sum = sum + count;
+            sum = sum + (temp > 0 ? count +1 : count);
         }
         return sum;
     }
